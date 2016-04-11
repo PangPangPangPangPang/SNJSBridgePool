@@ -21,5 +21,15 @@
                     return method;
     
     }];
+    [self emportMethod:bridge
+                  name:@"sleep"
+                method:^id(JSContext *context) {
+                    id method = ^(NSString *string) {
+                        sleep(2);
+                        NSLog(@"---------%@",[JSContext currentContext]);
+                    };
+                    return method;
+
+}];
 }
 @end

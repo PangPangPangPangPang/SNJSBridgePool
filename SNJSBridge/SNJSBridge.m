@@ -24,7 +24,6 @@
         [_context setExceptionHandler:^(JSContext *context, JSValue *exception) {
             NSLog(@"%@ error: %@",context,exception);
         }];
-        [_context setName:@"default"];
         _loadFiles = [NSMutableDictionary new];
         [SNJSCommonFiller loadCommonMethod:self];
     }

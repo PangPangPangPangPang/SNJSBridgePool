@@ -14,4 +14,9 @@
 
 @property (nonatomic, retain)JSContext *coreContext;
 
++ (SNJSBridgePool *)shareInstance;
+- (void)evaluateScriptFromFile:(NSString *)file
+                               func:(NSString *)func
+                               args:(NSArray *)args
+                             finish:(void(^)(JSValue *value))finishBlock;
 @end
