@@ -8,6 +8,7 @@
 
 #import "SNJSBridge.h"
 #import "SNJSFileManager.h"
+#import "SNJSCommonFiller.h"
 
 @implementation SNJSBridge {
     JSContext *_context;
@@ -20,7 +21,12 @@
     if (self) {
         _virtualMachine = machine;
         _context = [[JSContext alloc] initWithVirtualMachine:_virtualMachine];
+        [_context setExceptionHandler:^(JSContext *context, JSValue *exception) {
+            NSLog(@"%@ error: %@",context,exception);
+        }];
+        [_context setName:@"default"];
         _loadFiles = [NSMutableDictionary new];
+        [SNJSCommonFiller loadCommonMethod:self];
     }
     return self;
 }
@@ -33,33 +39,26 @@
     return self;
 }
 
-
-- (JSValue *)evaluateScriptFromFile:(NSString *)file
-                          func:(NSString *)func
-                          args:(NSArray *)args {
-    NSString *path = [[NSBundle mainBundle] pathForResource:[file componentsSeparatedByString:@"."][0] ofType:@"js"];
-    NSString *fileString = [[SNJSFileManager shareInstance] contentForFileName:path];
-    if (![_loadFiles valueForKey:@"file"]) {
-        [_loadFiles setValue:fileString forKey:path];
-        [_context evaluateScript:fileString];
-    }
-    JSValue *value =[_context evaluateScript:[self generateFunc:func args:args]];
-    return value;
+- (void)setName:(NSString *)name {
+    [_context setName:name];
 }
 
-- (NSString *)generateFunc:(NSString *)func args:(NSArray *)args {
-    NSMutableString *result = [NSMutableString stringWithString:func];
-    [result appendString:@"("];
-    for (int i = 0; i < args.count; i++) {
-        NSString *arg;
-        if (i == args.count - 1) {
-            arg = [NSString stringWithFormat:@"%@",args[i]];
-        }else {
-            arg = [NSString stringWithFormat:@"%@,",args[i]];
-        }
-        [result appendString:arg];
+- (JSValue *)evaluateScriptFromFile:(NSString *)file
+                               func:(NSString *)func
+                               args:(NSArray *)args {
+    NSString *path = [[NSBundle mainBundle] pathForResource:[file componentsSeparatedByString:@"."][0] ofType:@"js"];
+    NSString *fileString = [[SNJSFileManager shareInstance] contentForFileName:path];
+    if (![_loadFiles valueForKey:path]) {
+        [_loadFiles setValue:fileString forKey:path];
+        JSValue *value = [_context evaluateScript:fileString];
+        JSManagedValue *managedValue = [JSManagedValue managedValueWithValue:value];
+        [_virtualMachine addManagedReference:managedValue withOwner:self];
     }
-    [result appendString:@")"];
+    JSValue *function = _context[func];
+    JSValue *result = nil;
+    if (function) {
+        result = [function callWithArguments:args];
+    }
     return result;
 }
 

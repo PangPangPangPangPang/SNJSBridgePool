@@ -22,7 +22,7 @@
     JSValue *value = [bridge evaluateScriptFromFile:@"teacher.js"
                                                func:@"add"
                                                args:@[@4]];
-    NSLog(@"%d",[value toInt32]);
+    NSLog(@"%@",[value toString]);
 }
 
 - (void)didReceiveMemoryWarning {

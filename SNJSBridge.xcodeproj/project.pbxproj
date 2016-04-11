@@ -16,6 +16,10 @@
 		50B4A8871CB93AD60045A383 /* SNJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4A8861CB93AD60045A383 /* SNJSBridge.m */; };
 		50B4A8891CB95C3B0045A383 /* teacher.js in Resources */ = {isa = PBXBuildFile; fileRef = 50B4A8881CB95C3B0045A383 /* teacher.js */; };
 		50B4A88C1CB960F60045A383 /* SNJSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4A88B1CB960F60045A383 /* SNJSFileManager.m */; };
+		50DDB47D1CBB42AC005AE264 /* SNJSFiller.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DDB47C1CBB42AC005AE264 /* SNJSFiller.m */; };
+		50DDB4801CBB4558005AE264 /* SNJSCommonFiller.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DDB47F1CBB4558005AE264 /* SNJSCommonFiller.m */; };
+		50DDB4831CBB488B005AE264 /* SNJSBridgePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DDB4821CBB488B005AE264 /* SNJSBridgePool.m */; };
+		50DDB4861CBB48CF005AE264 /* SNJSCoreFiller.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DDB4851CBB48CF005AE264 /* SNJSCoreFiller.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +38,14 @@
 		50B4A8881CB95C3B0045A383 /* teacher.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = teacher.js; sourceTree = "<group>"; };
 		50B4A88A1CB960F60045A383 /* SNJSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNJSFileManager.h; sourceTree = "<group>"; };
 		50B4A88B1CB960F60045A383 /* SNJSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNJSFileManager.m; sourceTree = "<group>"; };
+		50DDB47B1CBB42AC005AE264 /* SNJSFiller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNJSFiller.h; sourceTree = "<group>"; };
+		50DDB47C1CBB42AC005AE264 /* SNJSFiller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNJSFiller.m; sourceTree = "<group>"; };
+		50DDB47E1CBB4558005AE264 /* SNJSCommonFiller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNJSCommonFiller.h; sourceTree = "<group>"; };
+		50DDB47F1CBB4558005AE264 /* SNJSCommonFiller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNJSCommonFiller.m; sourceTree = "<group>"; };
+		50DDB4811CBB488B005AE264 /* SNJSBridgePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNJSBridgePool.h; sourceTree = "<group>"; };
+		50DDB4821CBB488B005AE264 /* SNJSBridgePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNJSBridgePool.m; sourceTree = "<group>"; };
+		50DDB4841CBB48CF005AE264 /* SNJSCoreFiller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNJSCoreFiller.h; sourceTree = "<group>"; };
+		50DDB4851CBB48CF005AE264 /* SNJSCoreFiller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNJSCoreFiller.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +92,14 @@
 				50B4A8861CB93AD60045A383 /* SNJSBridge.m */,
 				50B4A88A1CB960F60045A383 /* SNJSFileManager.h */,
 				50B4A88B1CB960F60045A383 /* SNJSFileManager.m */,
+				50DDB47B1CBB42AC005AE264 /* SNJSFiller.h */,
+				50DDB47C1CBB42AC005AE264 /* SNJSFiller.m */,
+				50DDB47E1CBB4558005AE264 /* SNJSCommonFiller.h */,
+				50DDB47F1CBB4558005AE264 /* SNJSCommonFiller.m */,
+				50DDB4841CBB48CF005AE264 /* SNJSCoreFiller.h */,
+				50DDB4851CBB48CF005AE264 /* SNJSCoreFiller.m */,
+				50DDB4811CBB488B005AE264 /* SNJSBridgePool.h */,
+				50DDB4821CBB488B005AE264 /* SNJSBridgePool.m */,
 			);
 			path = SNJSBridge;
 			sourceTree = "<group>";
@@ -163,8 +183,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				50DDB4831CBB488B005AE264 /* SNJSBridgePool.m in Sources */,
 				50B4A88C1CB960F60045A383 /* SNJSFileManager.m in Sources */,
+				50DDB4801CBB4558005AE264 /* SNJSCommonFiller.m in Sources */,
+				50DDB47D1CBB42AC005AE264 /* SNJSFiller.m in Sources */,
 				50B4A8761CB93AB10045A383 /* ViewController.m in Sources */,
+				50DDB4861CBB48CF005AE264 /* SNJSCoreFiller.m in Sources */,
 				50B4A8731CB93AB10045A383 /* AppDelegate.m in Sources */,
 				50B4A8871CB93AD60045A383 /* SNJSBridge.m in Sources */,
 				50B4A8701CB93AB10045A383 /* main.m in Sources */,
@@ -316,6 +340,7 @@
 				50B4A8841CB93AB10045A383 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

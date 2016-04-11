@@ -11,6 +11,8 @@
 
 @interface SNJSBridge : NSObject
 
+@property (nonatomic, retain)JSContext *context;
+@property (nonatomic, retain)NSString  *name;
 - (instancetype)initWithVirtualMachine:(JSVirtualMachine *)machine NS_DESIGNATED_INITIALIZER;
 - (JSValue *)evaluateScriptFromFile:(NSString *)file
                                func:(NSString *)func
