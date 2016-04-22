@@ -6,12 +6,19 @@ var OffSet = function (x,y) {
     this.y = y || 0;
 }
 
-var Size = function (x,y,w,h) {
+var Size = function (w,h) {
+    this.width = w || 0;
+    this.height = h || 0;
+}
+
+var Position = function (x,y) {
     this.x = x || 0;
     this.y = y || 0;
-    this.w = w || 0;
-    this.h = h || 0;
+}
 
+var Frame = function (s,p) {
+    this.size = s || new Size();
+    this.position = p || new Position();
 }
 
 var Item = function () {
@@ -20,6 +27,7 @@ var Item = function () {
     this.refrenceY = undefined;
     this.offSet = new OffSet();
     this.size = new Size();
+    this.frame = new Frame();
 }
 
 Item.prototype.offSet = function (x, y) {
