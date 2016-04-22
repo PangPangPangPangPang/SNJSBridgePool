@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		50982FD91CCA2F070038AAAB /* Frame.js in Resources */ = {isa = PBXBuildFile; fileRef = 50982FD81CCA2F070038AAAB /* Frame.js */; };
+		50982FDC1CCA41BD0038AAAB /* Calculate.js in Resources */ = {isa = PBXBuildFile; fileRef = 50982FDA1CCA41BD0038AAAB /* Calculate.js */; };
+		50982FDD1CCA41BD0038AAAB /* RelativeEnum.js in Resources */ = {isa = PBXBuildFile; fileRef = 50982FDB1CCA41BD0038AAAB /* RelativeEnum.js */; };
 		50B4A8701CB93AB10045A383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4A86F1CB93AB10045A383 /* main.m */; };
 		50B4A8731CB93AB10045A383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4A8721CB93AB10045A383 /* AppDelegate.m */; };
 		50B4A8761CB93AB10045A383 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4A8751CB93AB10045A383 /* ViewController.m */; };
@@ -14,7 +17,6 @@
 		50B4A87B1CB93AB10045A383 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 50B4A87A1CB93AB10045A383 /* Assets.xcassets */; };
 		50B4A87E1CB93AB10045A383 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 50B4A87C1CB93AB10045A383 /* LaunchScreen.storyboard */; };
 		50B4A8871CB93AD60045A383 /* SNJSBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4A8861CB93AD60045A383 /* SNJSBridge.m */; };
-		50B4A8891CB95C3B0045A383 /* teacher.js in Resources */ = {isa = PBXBuildFile; fileRef = 50B4A8881CB95C3B0045A383 /* teacher.js */; };
 		50B4A88C1CB960F60045A383 /* SNJSFileManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4A88B1CB960F60045A383 /* SNJSFileManager.m */; };
 		50DDB47D1CBB42AC005AE264 /* SNJSFiller.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DDB47C1CBB42AC005AE264 /* SNJSFiller.m */; };
 		50DDB4801CBB4558005AE264 /* SNJSCommonFiller.m in Sources */ = {isa = PBXBuildFile; fileRef = 50DDB47F1CBB4558005AE264 /* SNJSCommonFiller.m */; };
@@ -23,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		50982FD81CCA2F070038AAAB /* Frame.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Frame.js; sourceTree = "<group>"; };
+		50982FDA1CCA41BD0038AAAB /* Calculate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Calculate.js; sourceTree = "<group>"; };
+		50982FDB1CCA41BD0038AAAB /* RelativeEnum.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = RelativeEnum.js; sourceTree = "<group>"; };
 		50B4A86B1CB93AB10045A383 /* SNJSBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNJSBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B4A86F1CB93AB10045A383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50B4A8711CB93AB10045A383 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -35,7 +40,6 @@
 		50B4A87F1CB93AB10045A383 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		50B4A8851CB93AD60045A383 /* SNJSBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNJSBridge.h; sourceTree = "<group>"; };
 		50B4A8861CB93AD60045A383 /* SNJSBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNJSBridge.m; sourceTree = "<group>"; };
-		50B4A8881CB95C3B0045A383 /* teacher.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = teacher.js; sourceTree = "<group>"; };
 		50B4A88A1CB960F60045A383 /* SNJSFileManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNJSFileManager.h; sourceTree = "<group>"; };
 		50B4A88B1CB960F60045A383 /* SNJSFileManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SNJSFileManager.m; sourceTree = "<group>"; };
 		50DDB47B1CBB42AC005AE264 /* SNJSFiller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SNJSFiller.h; sourceTree = "<group>"; };
@@ -59,9 +63,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		50982FD71CCA2F070038AAAB /* FrameCal */ = {
+			isa = PBXGroup;
+			children = (
+				50982FDA1CCA41BD0038AAAB /* Calculate.js */,
+				50982FDB1CCA41BD0038AAAB /* RelativeEnum.js */,
+				50982FD81CCA2F070038AAAB /* Frame.js */,
+			);
+			path = FrameCal;
+			sourceTree = "<group>";
+		};
 		50B4A8621CB93AB10045A383 = {
 			isa = PBXGroup;
 			children = (
+				50982FD71CCA2F070038AAAB /* FrameCal */,
 				50B4A86D1CB93AB10045A383 /* SNJSBridge */,
 				50B4A86C1CB93AB10045A383 /* Products */,
 			);
@@ -78,7 +93,6 @@
 		50B4A86D1CB93AB10045A383 /* SNJSBridge */ = {
 			isa = PBXGroup;
 			children = (
-				50B4A8881CB95C3B0045A383 /* teacher.js */,
 				50B4A8711CB93AB10045A383 /* AppDelegate.h */,
 				50B4A8721CB93AB10045A383 /* AppDelegate.m */,
 				50B4A8741CB93AB10045A383 /* ViewController.h */,
@@ -170,7 +184,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				50B4A87E1CB93AB10045A383 /* LaunchScreen.storyboard in Resources */,
-				50B4A8891CB95C3B0045A383 /* teacher.js in Resources */,
+				50982FDD1CCA41BD0038AAAB /* RelativeEnum.js in Resources */,
+				50982FDC1CCA41BD0038AAAB /* Calculate.js in Resources */,
+				50982FD91CCA2F070038AAAB /* Frame.js in Resources */,
 				50B4A87B1CB93AB10045A383 /* Assets.xcassets in Resources */,
 				50B4A8791CB93AB10045A383 /* Main.storyboard in Resources */,
 			);

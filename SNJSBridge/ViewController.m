@@ -18,21 +18,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
-    for (int i = 0; i < 16; i++) {
-        [[SNJSBridgePool shareInstance] evaluateScriptFromFile:@"teacher.js"
-                                                          func:@"add"
+        [[SNJSBridgePool shareInstance] evaluateScriptFromFile:@"Calculate"
+                                                          func:@""
                                                           args:@[@4]
-                                                        finish:^(JSValue *value) {
-                                                            NSLog(@"finished");
-                                                        }];
-
-    }
-}
-
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+                                                        finish:nil];
 }
 
 @end

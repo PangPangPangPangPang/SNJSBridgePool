@@ -7,29 +7,29 @@
 //
 
 #import "SNJSCommonFiller.h"
+#import "SNJSFileManager.h"
 
 @implementation SNJSCommonFiller
 
 + (void)loadCommonMethod:(SNJSBridge *)bridge {
     [self emportMethod:bridge
-                  name:@"xixi"
+                  name:@"print"
                 method:^id(JSContext *context) {
-                    
                     id method = ^(NSString *string) {
-                        return [NSString stringWithFormat:@"xixi----%@",string];
+                        NSLog(@"SNJSBridge---%@",string);
                     };
                     return method;
+                }];
     
-    }];
     [self emportMethod:bridge
-                  name:@"sleep"
+                  name:@"require"
                 method:^id(JSContext *context) {
-                    id method = ^(NSString *string) {
-                        sleep(2);
-                        NSLog(@"---------%@",[JSContext currentContext]);
+                    id method = ^(NSString *file) {
+                        NSString *path = [[NSBundle mainBundle] pathForResource:[file componentsSeparatedByString:@"."][0] ofType:@"js"];
+                        NSString * c = [[SNJSFileManager shareInstance] contentForFileName:path];
+                        [context evaluateScript:c];
                     };
                     return method;
-
-}];
+    }];
 }
 @end

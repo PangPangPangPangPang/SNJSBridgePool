@@ -22,7 +22,7 @@
         _virtualMachine = machine;
         _context = [[JSContext alloc] initWithVirtualMachine:_virtualMachine];
         [_context setExceptionHandler:^(JSContext *context, JSValue *exception) {
-            NSLog(@"%@ error: %@",context,exception);
+            NSLog(@"%@%@",context,exception);
         }];
         _loadFiles = [NSMutableDictionary new];
         [SNJSCommonFiller loadCommonMethod:self];
@@ -52,6 +52,10 @@
         JSValue *value = [_context evaluateScript:fileString];
         JSManagedValue *managedValue = [JSManagedValue managedValueWithValue:value];
         [_virtualMachine addManagedReference:managedValue withOwner:self];
+    }
+    if (!args) {
+        JSValue *result = [_context evaluateScript:file];
+        return result;
     }
     JSValue *function = _context[func];
     JSValue *result = nil;
