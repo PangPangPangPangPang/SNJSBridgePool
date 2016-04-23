@@ -10,6 +10,7 @@
 		50982FD91CCA2F070038AAAB /* Frame.js in Resources */ = {isa = PBXBuildFile; fileRef = 50982FD81CCA2F070038AAAB /* Frame.js */; };
 		50982FDC1CCA41BD0038AAAB /* Calculate.js in Resources */ = {isa = PBXBuildFile; fileRef = 50982FDA1CCA41BD0038AAAB /* Calculate.js */; };
 		50982FDD1CCA41BD0038AAAB /* RelativeEnum.js in Resources */ = {isa = PBXBuildFile; fileRef = 50982FDB1CCA41BD0038AAAB /* RelativeEnum.js */; };
+		50982FDF1CCB0D660038AAAB /* main.js in Resources */ = {isa = PBXBuildFile; fileRef = 50982FDE1CCB0D660038AAAB /* main.js */; };
 		50B4A8701CB93AB10045A383 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4A86F1CB93AB10045A383 /* main.m */; };
 		50B4A8731CB93AB10045A383 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4A8721CB93AB10045A383 /* AppDelegate.m */; };
 		50B4A8761CB93AB10045A383 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 50B4A8751CB93AB10045A383 /* ViewController.m */; };
@@ -28,6 +29,7 @@
 		50982FD81CCA2F070038AAAB /* Frame.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Frame.js; sourceTree = "<group>"; };
 		50982FDA1CCA41BD0038AAAB /* Calculate.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = Calculate.js; sourceTree = "<group>"; };
 		50982FDB1CCA41BD0038AAAB /* RelativeEnum.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = RelativeEnum.js; sourceTree = "<group>"; };
+		50982FDE1CCB0D660038AAAB /* main.js */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.javascript; path = main.js; sourceTree = "<group>"; };
 		50B4A86B1CB93AB10045A383 /* SNJSBridge.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SNJSBridge.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		50B4A86F1CB93AB10045A383 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		50B4A8711CB93AB10045A383 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		50982FD71CCA2F070038AAAB /* FrameCal */ = {
 			isa = PBXGroup;
 			children = (
+				50982FDE1CCB0D660038AAAB /* main.js */,
 				50982FDA1CCA41BD0038AAAB /* Calculate.js */,
 				50982FDB1CCA41BD0038AAAB /* RelativeEnum.js */,
 				50982FD81CCA2F070038AAAB /* Frame.js */,
@@ -187,6 +190,7 @@
 				50982FDD1CCA41BD0038AAAB /* RelativeEnum.js in Resources */,
 				50982FDC1CCA41BD0038AAAB /* Calculate.js in Resources */,
 				50982FD91CCA2F070038AAAB /* Frame.js in Resources */,
+				50982FDF1CCB0D660038AAAB /* main.js in Resources */,
 				50B4A87B1CB93AB10045A383 /* Assets.xcassets in Resources */,
 				50B4A8791CB93AB10045A383 /* Main.storyboard in Resources */,
 			);

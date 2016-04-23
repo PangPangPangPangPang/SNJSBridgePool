@@ -62,7 +62,9 @@ static SNJSBridgePool *_pool = nil;
         dispatch_semaphore_signal(_l);
 
         dispatch_async(dispatch_get_main_queue(), ^{
-            finishBlock(value);
+            if (finishBlock) {
+                finishBlock(value);
+            }
         });
     });
     

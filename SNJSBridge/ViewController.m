@@ -18,10 +18,12 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-        [[SNJSBridgePool shareInstance] evaluateScriptFromFile:@"Calculate"
-                                                          func:@""
+        [[SNJSBridgePool shareInstance] evaluateScriptFromFile:@"main"
+                                                          func:@"test"
                                                           args:@[@4]
-                                                        finish:nil];
+                                                        finish:^(JSValue *value) {
+                                                            NSLog(@"%@", [value toDictionary]);
+                                                        }];
 }
 
 @end

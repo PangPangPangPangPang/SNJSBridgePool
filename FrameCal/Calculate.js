@@ -5,71 +5,67 @@ require('RelativeEnum.js');
 require('Frame.js');
 
 var calculate = function (item) {
-    var size = new Size();
-    var father = item.father.size;
+    var father = item.father || new Item();
+    
     switch (item.refrenceX) {
         case RefrenceX.RefrenceLL:
-            item.position.x = item.offSet.x;
+            item.position.x = item.offSet.x + father.position.x;
             break;
         case RefrenceX.RefrenceLC:
-            item.position.x = item.offSet.x + father.size.width / 2;
+            item.position.x = item.offSet.x + father.size.width / 2 + father.position.x;
             break;
         case RefrenceX.RefrenceLR:
-            item.position.x = item.offSet.x + father.size.width;
+            item.position.x = item.offSet.x + father.size.width + father.position.x;
             break;
         case RefrenceX.RefrenceCL:
-            item.position.x = item.offSet.x + item.size.width / 2;
+            item.position.x = item.offSet.x + item.size.width / 2 + father.position.x;
             break;
         case RefrenceX.RefrenceCC:
-            item.position.x = item.offSet.x + item.size.width / 2 - father.size.width / 2;
+            item.position.x = item.offSet.x + item.size.width / 2 - father.size.width / 2 + father.position.x;
             break;
         case RefrenceX.RefrenceCR:
-            item.position.x = item.offSet.x + item.size.width / 2 - father.size.width;
+            item.position.x = item.offSet.x + item.size.width / 2 - father.size.width + father.position.x;
             break;
         case RefrenceX.RefrenceRL:
-            item.position.x = item.offSet.x + item.size.width;
+            item.position.x = item.offSet.x + item.size.width + father.position.x;
             break;
         case RefrenceX.RefrenceRC:
-            item.position.x = item.offSet.x + item.size.width - father.size.width / 2;
+            item.position.x = item.offSet.x + item.size.width - father.size.width / 2 + father.position.x;
             break;
         case RefrenceX.RefrenceRR:
-            item.position.x = item.offSet.x + item.size.width - father.size.width;
+            item.position.x = item.offSet.x + item.size.width - father.size.width + father.position.x;
             break;
     }
 
     switch (item.refrenceY) {
-        case RefrenceX.RefrenceTT:
-            item.position.y = item.offSet.y;
+        case RefrenceY.RefrenceTT:
+            item.position.y = item.offSet.y + father.position.y;
             break;
-        case RefrenceX.RefrenceTC:
-            item.position.y = item.offSet.y + father.size.height / 2;
+        case RefrenceY.RefrenceTC:
+            item.position.y = item.offSet.y + father.size.height / 2 + father.position.y;
             break;
-        case RefrenceX.RefrenceTB:
-            item.position.y = item.offSet.y + father.size.height;
+        case RefrenceY.RefrenceTB:
+            item.position.y = item.offSet.y + father.size.height + father.position.y;
             break;
-        case RefrenceX.RefrenceCT:
-            item.position.y = item.offSet.y + item.size.height / 2;
+        case RefrenceY.RefrenceCT:
+            item.position.y = item.offSet.y + item.size.height / 2 + father.position.y;
             break;
-        case RefrenceX.RefrenceCC:
-            item.position.y = item.offSet.y + item.size.height / 2 - father.size.height / 2;
+        case RefrenceY.RefrenceCC:
+            item.position.y = item.offSet.y + item.size.height / 2 - father.size.height / 2 + father.position.y;
             break;
-        case RefrenceX.RefrenceCB:
-            item.position.y = item.offSet.y + item.size.height / 2 - father.size.height;
+        case RefrenceY.RefrenceCB:
+            item.position.y = item.offSet.y + item.size.height / 2 - father.size.height + father.position.y;
             break;
-        case RefrenceX.RefrenceBT:
-            item.position.y = item.offSet.y + item.size.height;
+        case RefrenceY.RefrenceBT:
+            item.position.y = item.offSet.y + item.size.height + father.position.y;
             break;
-        case RefrenceX.RefrenceBC:
-            item.position.y = item.offSet.y + item.size.height - father.size.height / 2;
+        case RefrenceY.RefrenceBC:
+            item.position.y = item.offSet.y + item.size.height - father.size.height / 2 + father.position.y;
             break;
-        case RefrenceX.RefrenceBB:
-            item.position.y = item.offSet.y + item.size.height - father.size.height;
+        case RefrenceY.RefrenceBB:
+            item.position.y = item.offSet.y + item.size.height - father.size.height + father.position.y;
             break;
     }
-    return size;
+    
+    item.frame = new Frame(item.size,item.position);
 }
-
-var item = new Item();
-var size = calculate(item);
-print(size.x)
-

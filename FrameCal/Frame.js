@@ -27,14 +27,22 @@ var Item = function () {
     this.refrenceY = undefined;
     this.offSet = new OffSet();
     this.size = new Size();
+    this.position = new Position();
     this.frame = new Frame();
 }
 
-Item.prototype.offSet = function (x, y) {
+Item.prototype.setOffSet = function (x, y) {
     this.offSet.x = x;
     this.offSet.y = y;
 }
 
-Item.prototype.father = function (father) {
-    this.father = father;
+
+Item.prototype.setPosition = function (x, y) {
+    this.position.x = x;
+    this.position.y = y;
+}
+
+Item.prototype.setSize = function (w, h) {
+    this.size.width = w;
+    this.size.height = h;
 }
